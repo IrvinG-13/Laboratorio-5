@@ -137,5 +137,9 @@ namespace Laboratorio_5
 
         }
 
+        private void textNombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
