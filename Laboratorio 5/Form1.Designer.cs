@@ -30,9 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.entradasG = new System.Windows.Forms.Label();
+            this.entradasV = new System.Windows.Forms.Label();
+            this.entradasP = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -41,36 +43,41 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.entradas = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.rbGeneral = new System.Windows.Forms.RadioButton();
+            this.rbPlatino = new System.Windows.Forms.RadioButton();
+            this.rbVIP = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.textNombre = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.radioButton5 = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.precioEntrada = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
             this.lblEntradas = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.estacionamientoEntradas = new System.Windows.Forms.NumericUpDown();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.label15 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.entradas)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.estacionamientoEntradas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.entradasG);
+            this.groupBox1.Controls.Add(this.entradasV);
+            this.groupBox1.Controls.Add(this.entradasP);
             this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Controls.Add(this.label12);
-            this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label9);
@@ -79,11 +86,11 @@
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.numericUpDown1);
+            this.groupBox1.Controls.Add(this.entradas);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.radioButton3);
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Controls.Add(this.rbGeneral);
+            this.groupBox1.Controls.Add(this.rbPlatino);
+            this.groupBox1.Controls.Add(this.rbVIP);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.textNombre);
             this.groupBox1.Location = new System.Drawing.Point(34, 12);
@@ -92,6 +99,33 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Entradas";
+            // 
+            // entradasG
+            // 
+            this.entradasG.AutoSize = true;
+            this.entradasG.Location = new System.Drawing.Point(371, 365);
+            this.entradasG.Name = "entradasG";
+            this.entradasG.Size = new System.Drawing.Size(36, 20);
+            this.entradasG.TabIndex = 19;
+            this.entradasG.Text = "120";
+            // 
+            // entradasV
+            // 
+            this.entradasV.AutoSize = true;
+            this.entradasV.Location = new System.Drawing.Point(232, 365);
+            this.entradasV.Name = "entradasV";
+            this.entradasV.Size = new System.Drawing.Size(27, 20);
+            this.entradasV.TabIndex = 18;
+            this.entradasV.Text = "20";
+            // 
+            // entradasP
+            // 
+            this.entradasP.AutoSize = true;
+            this.entradasP.Location = new System.Drawing.Point(88, 365);
+            this.entradasP.Name = "entradasP";
+            this.entradasP.Size = new System.Drawing.Size(31, 20);
+            this.entradasP.TabIndex = 17;
+            this.entradasP.Text = "10 ";
             // 
             // label14
             // 
@@ -109,15 +143,6 @@
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(0, 20);
             this.label12.TabIndex = 5;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(139, 384);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(111, 20);
-            this.label13.TabIndex = 15;
-            this.label13.Text = "Disponibilidad:";
             // 
             // label11
             // 
@@ -190,17 +215,17 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "Tipo de Entrada";
             // 
-            // numericUpDown1
+            // entradas
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(76, 160);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.entradas.Location = new System.Drawing.Point(76, 160);
+            this.entradas.Maximum = new decimal(new int[] {
             5,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 26);
-            this.numericUpDown1.TabIndex = 6;
+            this.entradas.Name = "entradas";
+            this.entradas.Size = new System.Drawing.Size(120, 26);
+            this.entradas.TabIndex = 6;
             // 
             // label2
             // 
@@ -211,38 +236,38 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Numeros de entradas";
             // 
-            // radioButton3
+            // rbGeneral
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(362, 278);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(91, 24);
-            this.radioButton3.TabIndex = 4;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "General";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.rbGeneral.AutoSize = true;
+            this.rbGeneral.Location = new System.Drawing.Point(362, 278);
+            this.rbGeneral.Name = "rbGeneral";
+            this.rbGeneral.Size = new System.Drawing.Size(91, 24);
+            this.rbGeneral.TabIndex = 4;
+            this.rbGeneral.TabStop = true;
+            this.rbGeneral.Text = "General";
+            this.rbGeneral.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // rbPlatino
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(90, 278);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(82, 24);
-            this.radioButton2.TabIndex = 3;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Platino";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rbPlatino.AutoSize = true;
+            this.rbPlatino.Location = new System.Drawing.Point(90, 278);
+            this.rbPlatino.Name = "rbPlatino";
+            this.rbPlatino.Size = new System.Drawing.Size(82, 24);
+            this.rbPlatino.TabIndex = 3;
+            this.rbPlatino.TabStop = true;
+            this.rbPlatino.Text = "Platino";
+            this.rbPlatino.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // rbVIP
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(236, 278);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(60, 24);
-            this.radioButton1.TabIndex = 2;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "VIP";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rbVIP.AutoSize = true;
+            this.rbVIP.Location = new System.Drawing.Point(236, 278);
+            this.rbVIP.Name = "rbVIP";
+            this.rbVIP.Size = new System.Drawing.Size(60, 24);
+            this.rbVIP.TabIndex = 2;
+            this.rbVIP.TabStop = true;
+            this.rbVIP.Text = "VIP";
+            this.rbVIP.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -294,7 +319,8 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.label15);
+            this.groupBox2.Controls.Add(this.precioEntrada);
+            this.groupBox2.Controls.Add(this.label17);
             this.groupBox2.Controls.Add(this.lblEntradas);
             this.groupBox2.Controls.Add(this.lblNombre);
             this.groupBox2.Location = new System.Drawing.Point(757, 43);
@@ -302,12 +328,30 @@
             this.groupBox2.Size = new System.Drawing.Size(250, 321);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Factura";
+            this.groupBox2.Text = "Resumen De Compra";
+            // 
+            // precioEntrada
+            // 
+            this.precioEntrada.AutoSize = true;
+            this.precioEntrada.Location = new System.Drawing.Point(179, 85);
+            this.precioEntrada.Name = "precioEntrada";
+            this.precioEntrada.Size = new System.Drawing.Size(13, 20);
+            this.precioEntrada.TabIndex = 3;
+            this.precioEntrada.Text = ".";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(19, 85);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(74, 20);
+            this.label17.TabIndex = 2;
+            this.label17.Text = "Entradas";
             // 
             // lblEntradas
             // 
             this.lblEntradas.AutoSize = true;
-            this.lblEntradas.Location = new System.Drawing.Point(19, 85);
+            this.lblEntradas.Location = new System.Drawing.Point(99, 85);
             this.lblEntradas.Name = "lblEntradas";
             this.lblEntradas.Size = new System.Drawing.Size(13, 20);
             this.lblEntradas.TabIndex = 1;
@@ -324,7 +368,7 @@
             // 
             // btnRegistrar
             // 
-            this.btnRegistrar.Location = new System.Drawing.Point(34, 588);
+            this.btnRegistrar.Location = new System.Drawing.Point(34, 607);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(175, 66);
             this.btnRegistrar.TabIndex = 2;
@@ -334,7 +378,7 @@
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(231, 588);
+            this.btnLimpiar.Location = new System.Drawing.Point(231, 607);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(180, 66);
             this.btnLimpiar.TabIndex = 3;
@@ -344,28 +388,32 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.estacionamientoEntradas);
             this.groupBox3.Controls.Add(this.radioButton4);
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.radioButton5);
             this.groupBox3.Location = new System.Drawing.Point(34, 454);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(412, 100);
+            this.groupBox3.Size = new System.Drawing.Size(453, 128);
             this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Estacionamiento";
             // 
+            // estacionamientoEntradas
+            // 
+            this.estacionamientoEntradas.Location = new System.Drawing.Point(33, 81);
+            this.estacionamientoEntradas.Maximum = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
+            this.estacionamientoEntradas.Name = "estacionamientoEntradas";
+            this.estacionamientoEntradas.Size = new System.Drawing.Size(120, 26);
+            this.estacionamientoEntradas.TabIndex = 17;
+            // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(6, 105);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(73, 20);
-            this.label15.TabIndex = 2;
-            this.label15.Text = "Nombre: ";
             // 
             // Form1
             // 
@@ -382,11 +430,12 @@
             this.Text = "PanaTickets";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.entradas)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.estacionamientoEntradas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
@@ -396,12 +445,12 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton rbGeneral;
+        private System.Windows.Forms.RadioButton rbPlatino;
+        private System.Windows.Forms.RadioButton rbVIP;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textNombre;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown entradas;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.RadioButton radioButton4;
         private System.Windows.Forms.RadioButton radioButton5;
@@ -418,12 +467,16 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label lblEntradas;
         private System.Windows.Forms.ErrorProvider errorProvider1;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.NumericUpDown estacionamientoEntradas;
+        private System.Windows.Forms.Label entradasG;
+        private System.Windows.Forms.Label entradasV;
+        private System.Windows.Forms.Label entradasP;
+        private System.Windows.Forms.Label precioEntrada;
+        private System.Windows.Forms.Label label17;
     }
 }
 
