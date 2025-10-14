@@ -30,6 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -47,17 +52,13 @@
             this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.radioButton5 = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lblEntradas = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.lblEntradas = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label15 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -91,6 +92,50 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Entradas";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(277, 384);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(13, 20);
+            this.label14.TabIndex = 16;
+            this.label14.Text = ".";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(552, 116);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(0, 20);
+            this.label12.TabIndex = 5;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(139, 384);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(111, 20);
+            this.label13.TabIndex = 15;
+            this.label13.Text = "Disponibilidad:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(371, 317);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(18, 20);
+            this.label11.TabIndex = 14;
+            this.label11.Text = "$";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(232, 317);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(18, 20);
+            this.label10.TabIndex = 13;
+            this.label10.Text = "$";
             // 
             // label9
             // 
@@ -249,6 +294,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label15);
             this.groupBox2.Controls.Add(this.lblEntradas);
             this.groupBox2.Controls.Add(this.lblNombre);
             this.groupBox2.Location = new System.Drawing.Point(757, 43);
@@ -257,6 +303,15 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Factura";
+            // 
+            // lblEntradas
+            // 
+            this.lblEntradas.AutoSize = true;
+            this.lblEntradas.Location = new System.Drawing.Point(19, 85);
+            this.lblEntradas.Name = "lblEntradas";
+            this.lblEntradas.Size = new System.Drawing.Size(13, 20);
+            this.lblEntradas.TabIndex = 1;
+            this.lblEntradas.Text = ".";
             // 
             // lblNombre
             // 
@@ -299,62 +354,18 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Estacionamiento";
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(232, 317);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(18, 20);
-            this.label10.TabIndex = 13;
-            this.label10.Text = "$";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(371, 317);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(18, 20);
-            this.label11.TabIndex = 14;
-            this.label11.Text = "$";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(552, 116);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(0, 20);
-            this.label12.TabIndex = 5;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(139, 384);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(111, 20);
-            this.label13.TabIndex = 15;
-            this.label13.Text = "Disponibilidad:";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(277, 384);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(13, 20);
-            this.label14.TabIndex = 16;
-            this.label14.Text = ".";
-            // 
-            // lblEntradas
-            // 
-            this.lblEntradas.AutoSize = true;
-            this.lblEntradas.Location = new System.Drawing.Point(19, 85);
-            this.lblEntradas.Name = "lblEntradas";
-            this.lblEntradas.Size = new System.Drawing.Size(13, 20);
-            this.lblEntradas.TabIndex = 1;
-            this.lblEntradas.Text = ".";
-            // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(6, 105);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(73, 20);
+            this.label15.TabIndex = 2;
+            this.label15.Text = "Nombre: ";
             // 
             // Form1
             // 
@@ -412,6 +423,7 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label lblEntradas;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Label label15;
     }
 }
 
