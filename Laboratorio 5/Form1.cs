@@ -136,10 +136,10 @@ namespace Laboratorio_5
 
 
         }
-
+        // hola
         private void textNombre_TextChanged(object sender, EventArgs e)
         {
-
+            int pepe;
         }
     }
 }
