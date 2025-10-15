@@ -30,6 +30,7 @@ namespace Laboratorio_5
         {
             validarFactura();
             string nombre = textNombre.Text.Trim();
+            
             Cliente cliente = new Cliente(nombre);
 
             if (rbPlatino.Checked) platino = 10;
@@ -38,6 +39,7 @@ namespace Laboratorio_5
 
             Entradas entradas = new Entradas(platino,VIP,general);
             lblNombre.Text = "Nombre: " + textNombre.Text;
+
 
             resumenDeFactura();
         }
@@ -86,7 +88,22 @@ namespace Laboratorio_5
             }
         }
 
-      
+        private void nombreKeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsControl(e.KeyChar)) return;
+            bool letra = char.IsLetter(e.KeyChar);
+            bool espacio = char.IsWhiteSpace(e.KeyChar);
+            bool guion = e.KeyChar == '-' || e.KeyChar == '/';
+
+            if (!(letra || espacio || guion))
+            {
+                e.Handled = true;
+            }
+        }
+
+
+
+
 
 
 
@@ -181,7 +198,7 @@ namespace Laboratorio_5
             lblTOTAL.Text = Convert.ToString(subtotal2 + ITBMS) + "$";
 
 
-
+            variableGuardar.Text += "Nombre: "+ textNombre.Text + " | " + "Tipo de Entrada: " + lblEntradas.Text + " | " + lblCantidad.Text + " | "+"Estacionamiento: "+ lblCantidadEstacionam.Text+ " | " +"Total: "+ lblTOTAL.Text + Environment.NewLine;
 
         }
         // hola

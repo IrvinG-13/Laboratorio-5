@@ -10,10 +10,13 @@ namespace Laboratorio_5
     {
         public string Nombre { get; set; }
 
+
         public Cliente(string nombre)
         {
             validarCampos(nombre);
+
             Nombre = nombre;
+
         }
 
 
