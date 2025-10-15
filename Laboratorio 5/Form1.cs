@@ -15,9 +15,15 @@ namespace Laboratorio_5
         double platino = 0;
         double VIP = 0;
         double general = 0;
+        double priceEstacionamiento;
+        double priceEntradas;
+        double subtotal1, subtotal2, SPAC, ITBMS;
+
         public Form1()
         {
             InitializeComponent();
+            nUPestacionamientoEntradas.Visible = false;
+
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
@@ -41,7 +47,16 @@ namespace Laboratorio_5
             textNombre.Clear();
             lblNombre.Text = "";
             lblEntradas.Text = "";
+            lblCantidad.Text = "";
+            lblCantidadEstacionam.Text = "";
+            PrecioEstacionamiento.Text = "";
             precioEntrada.Text = "";
+            lblSubtotal1.Text = "";
+            lblSubtotal2.Text = "";
+            lblSPAC.Text = "";
+            lblITBMS.Text = "";
+            lblTOTAL.Text = "";
+            lblEstacionamiento.Text = ".";
             validarFactura();
             btnRegistrar.Enabled = true;
             
@@ -71,18 +86,24 @@ namespace Laboratorio_5
             }
         }
 
+      
+
+
+
         //calculos de factura y validaciones de Radio Buttons
+
+
 
         private void resumenDeFactura()
         {
-            int cantidad = Convert.ToInt32(entradas.Value);
+            int cantidadEntradas = Convert.ToInt32(entradas.Value);
 
             if (rbPlatino.Checked)
             {
                 if (!int.TryParse(entradasP.Text, out int disponibles))
                     disponibles = 0; 
 
-                disponibles -= cantidad;
+                disponibles -= cantidadEntradas;
                 if (disponibles < 0) disponibles = 0;
 
                 rbPlatino.Enabled = disponibles > 0;
@@ -91,8 +112,9 @@ namespace Laboratorio_5
                     rbPlatino.Checked = false;
                 }
 
-                precioEntrada.Text = (cantidad * 150).ToString()+"$";
-                lblEntradas.Text = "Platino X"+cantidad.ToString();
+                precioEntrada.Text = (priceEntradas = (cantidadEntradas * 150)).ToString()+"$";
+                lblEntradas.Text = "Platino";
+                lblCantidad.Text = "X"+ cantidadEntradas.ToString();
                 entradasP.Text = disponibles.ToString();
             }
 
@@ -101,7 +123,7 @@ namespace Laboratorio_5
                 if (!int.TryParse(entradasV.Text, out int disponibles))
                     disponibles = 0;
 
-                disponibles -= cantidad;
+                disponibles -= cantidadEntradas;
                 if (disponibles < 0) disponibles = 0;
 
                 rbVIP.Enabled = disponibles > 0;
@@ -110,8 +132,9 @@ namespace Laboratorio_5
                     rbVIP.Checked = false;
                 }
 
-                precioEntrada.Text = (cantidad * 100).ToString() + "$";
-                lblEntradas.Text = "VIP X" + cantidad.ToString();
+                precioEntrada.Text = (priceEntradas=(cantidadEntradas * 100)).ToString() + "$";
+                lblEntradas.Text = "VIP";
+                lblCantidad.Text = "X" + cantidadEntradas.ToString();
                 entradasV.Text = disponibles.ToString();
             }
 
@@ -120,7 +143,7 @@ namespace Laboratorio_5
                 if (!int.TryParse(entradasG.Text, out int disponibles))
                     disponibles = 0;
 
-                disponibles -= cantidad;
+                disponibles -= cantidadEntradas;
                 if (disponibles < 0) disponibles = 0;
 
                 rbGeneral.Enabled = disponibles > 0;
@@ -129,17 +152,52 @@ namespace Laboratorio_5
                     rbGeneral.Checked = false;
                 }
 
-                precioEntrada.Text = (cantidad * 50).ToString() + "$";
-                lblEntradas.Text = "General X" + cantidad.ToString();
+                precioEntrada.Text = (priceEntradas=(cantidadEntradas * 50)).ToString() + "$";
+                lblEntradas.Text = "General";
+                lblCantidad.Text = "X" + cantidadEntradas.ToString();
                 entradasG.Text = disponibles.ToString();
             }
+
+            //ESTACIONAMIENTO
+            int cantidadEstacionamientos = Convert.ToInt32(nUPestacionamientoEntradas.Value);
+            priceEstacionamiento = cantidadEstacionamientos * 25;
+            lblEstacionamiento.Text = "Estacionamiento";
+            if (rbSEstacionamiento.Checked == true) { lblCantidadEstacionam.Text = "X" + nUPestacionamientoEntradas.Text; PrecioEstacionamiento.Text = Convert.ToString(priceEstacionamiento) + "$"; }
+            if (rbNestacionamiento.Checked == true) { lblCantidadEstacionam.Text = "X0"; PrecioEstacionamiento.Text = "0$"; }
+
+            //SUBTOTAL1
+            subtotal1 = priceEstacionamiento + priceEntradas;
+            lblSubtotal1.Text = Convert.ToString(subtotal1) + "$";
+            //SPAC 5%
+            SPAC = priceEntradas * 0.05;
+            lblSPAC.Text = Convert.ToString(SPAC) + "$";
+            //SUBTOTAL2
+            subtotal2 = subtotal1 + SPAC;
+            lblSubtotal2.Text = Convert.ToString(subtotal2) + "$";
+            //ITBMS 7%
+            ITBMS = subtotal2 * 0.07;
+            lblITBMS.Text = Convert.ToString(ITBMS) + "$";
+            //Total a pagar
+            lblTOTAL.Text = Convert.ToString(subtotal2 + ITBMS) + "$";
+
+
 
 
         }
         // hola
-        private void textNombre_TextChanged(object sender, EventArgs e)
+        
+
+        private void rbSEstacionamiento_CheckedChanged(object sender, EventArgs e)
         {
-            int pepe;
+            nUPestacionamientoEntradas.Visible = true;
         }
+
+        private void rbNestacionamiento_CheckedChanged(object sender, EventArgs e)
+        {
+            nUPestacionamientoEntradas.Visible = false;
+
+        }
+
+        
     }
 }
