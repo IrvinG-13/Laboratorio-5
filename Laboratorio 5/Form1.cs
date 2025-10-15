@@ -101,10 +101,14 @@ namespace Laboratorio_5
             }
         }
 
-
-
-
-
+        private void textNombre_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Control && e.KeyCode == Keys.V)
+            {
+                e.SuppressKeyPress = true;
+                e.Handled = true;
+            }
+        }
 
 
         //calculos de factura y validaciones de Radio Buttons
